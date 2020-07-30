@@ -1,9 +1,9 @@
+import UsersController from '@modules/users/controllers/UsersController';
 import { Router } from 'express';
 
 const usersRouter = Router();
+const usersController = new UsersController();
 
-usersRouter.get('/', (_, response) => {
-  response.send('Hello user!');
-});
+usersRouter.post('/', usersController.create);
 
 export default usersRouter;

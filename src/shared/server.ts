@@ -6,6 +6,7 @@ import 'reflect-metadata';
 import './database';
 import AppError from './errors/AppError';
 import routes from './routes';
+import './container';
 
 const app = express();
 app.use(cors());
